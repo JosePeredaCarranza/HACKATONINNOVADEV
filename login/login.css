@@ -1,0 +1,94 @@
+*{
+    font-family: "Varela Round", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#fondo-pag{
+    position: absolute;
+    z-index: -1;
+    filter: blur(3px);
+    background-size: cover;
+    background-position: center;
+    width:100% ;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bg-container{
+    background-color: whitesmoke;
+    width: 750px;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    align-items: center;
+}
+form label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+form button{
+    width: 28%;
+
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2); 
+}
+form input{
+    border-radius: 5px;
+    width: 200px;
+    height: 35px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2); 
+}
+#Imagen-login{
+    display: block;
+    width: auto;
+    height: 450px;
+}
+.centered-elements {
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bg-container-elements {
+    width: 375px;
+}
+.links {
+    font-size: 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.links a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
