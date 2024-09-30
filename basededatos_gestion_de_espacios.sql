@@ -1,0 +1,53 @@
+CREATE DATABASE gestion_espacios;
+USE gestion_espacios;
+CREATE TABLE Usuarios (
+	id_usuario INT NOT NULL auto_increment,
+	nombre VARCHAR(50) NOT NULL,
+	apellido VARCHAR(100) NOT NULL,
+    correo VARCHAR(100) NOT NULL,
+	contra VARCHAR(100) NOT NULL,
+	rol ENUM('estudiante', 'profesor', 'administrador') NOT NULL,
+	PRIMARY KEY (id_usuario),
+	UNIQUE INDEX id_usuario_UNIQUE (id_usuario ASC),
+	UNIQUE INDEX correo_UNIQUE (correo ASC))
+ENGINE = InnoDB;
+CREATE TABLE Espacios(
+   id_espacio INT NOT NULL AUTO_INCREMENT,
+   tipo ENUM('salon', 'laboratorio', 'otro') NOT NULL,
+   nombre VARCHAR(45) NOT NULL,
+   capacidad INT,
+   disponibilidad TINYINT(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (id_espacio))
+ENGINE = InnoDB;
+CREATE TABLE Cursos(
+   id_curso VARCHAR(10) NOT NULL,
+   nombre VARCHAR(45) NOT NULL,
+   PRIMARY KEY (id_curso))
+ENGINE = InnoDB;
+CREATE TABLE Horario(
+   id_horario INT NOT NULL auto_increment,
+   dia ENUM('Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado','Domingo') NOT NULL,
+   hora_inicio TIME NOT NULL,
+   hora_fin TIME NOT NULL,
+  PRIMARY KEY (id_horario))
+ENGINE = InnoDB;
+CREATE TABLE Programacion_cursos (
+	id_progrmacion_curso INT NOT NULL auto_increment,
+    seccion INT NOT NULL,
+	profesor VARCHAR(100) NULL,
+	cantidad_matriculados INT NOT NULL DEFAULT 0,
+	id_curso VARCHAR(10) NOT NULL,
+	id_horario INT NOT NULL,
+	PRIMARY KEY (id_progrmacion_curso),
+    FOREIGN KEY (id_curso) REFERENCES Cursos(id_curso),
+    FOREIGN KEY (id_horario) REFERENCES Horario(id_horario)
+)
+ENGINE = InnoDB;
+
+
+
+SHOW CREATE TABLE Usuarios;
+
+
+
+DROP TABLE Usuarios;
