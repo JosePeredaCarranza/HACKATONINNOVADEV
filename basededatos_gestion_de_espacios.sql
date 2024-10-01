@@ -1,7 +1,7 @@
 CREATE DATABASE gestion_espacios;
 USE gestion_espacios;
 CREATE TABLE Usuarios (
-	id_usuario INT NOT NULL auto_increment,
+	id_usuario INT NOT NULL AUTO_INCREMENT,
 	nombre VARCHAR(50) NOT NULL,
 	apellido VARCHAR(100) NOT NULL,
     correo VARCHAR(100) NOT NULL,
@@ -13,15 +13,18 @@ CREATE TABLE Usuarios (
 ENGINE = InnoDB;
 CREATE TABLE Espacios(
    id_espacio INT NOT NULL AUTO_INCREMENT,
-   tipo ENUM('salon', 'laboratorio', 'otro') NOT NULL,
    nombre VARCHAR(45) NOT NULL,
+   tipo ENUM('salon', 'laboratorio', 'otro') NOT NULL,
+   ubicacion VARCHAR(100),
    capacidad INT,
-   disponibilidad TINYINT(1) NOT NULL DEFAULT 1,
+   disponibilidad ENUM('Si','No') NOT NULL DEFAULT 'Si',
   PRIMARY KEY (id_espacio))
 ENGINE = InnoDB;
 CREATE TABLE Cursos(
    id_curso VARCHAR(10) NOT NULL,
-   nombre VARCHAR(45) NOT NULL,
+   nombre VARCHAR(100) NOT NULL,
+   ciclo INT NOT NULL,
+   creditos INT NOT NULL,
    PRIMARY KEY (id_curso))
 ENGINE = InnoDB;
 CREATE TABLE Horario(
@@ -50,4 +53,4 @@ SHOW CREATE TABLE Usuarios;
 
 
 
-DROP TABLE Usuarios;
+DROP TABLE Cursos;
