@@ -5,7 +5,7 @@ CREATE TABLE Usuarios (
 	nombre VARCHAR(50) NOT NULL,
 	apellido VARCHAR(100) NOT NULL,
     correo VARCHAR(100) NOT NULL,
-	contra VARCHAR(100) NOT NULL,
+	contra VARCHAR(162) NOT NULL,
 	rol ENUM('estudiante', 'profesor', 'administrador') NOT NULL,
 	PRIMARY KEY (id_usuario),
 	UNIQUE INDEX id_usuario_UNIQUE (id_usuario ASC),
