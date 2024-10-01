@@ -48,9 +48,5 @@ CREATE TABLE Programacion_cursos (
 ENGINE = InnoDB;
 
 
-
-SHOW CREATE TABLE Usuarios;
-
-
-
-DROP TABLE Cursos;
+-- SHOW CREATE TABLE nombre_tabla;
+-- DROP TABLE nombre_tabla;
