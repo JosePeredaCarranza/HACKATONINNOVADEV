@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Varela Round", sans-serif;
+}
+
+.header{
+    position: fixed;
+    background-color: #060607;  
+    padding: none;
+    height: 60px;
+    width: 100%;
+}
+
+.container-header{
+    display: block;
+    user-select: text;
+    color: #ffff;
+    cursor: pointer;
+}
+
+.user-session{
+    float: right;
+    margin-right: 20px;
+}
+
+.user-session a{
+    line-height: 60px;
+    margin-right: 10px;
+}
+
+/*MENU DESPLEGABLE*/
+
+#button{
+    display: none;
+}
+
+
+.menu-button, .logo-name a{
+    font-size: 25px;
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 60px;
+    float: left;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.sidebar{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#button:checked ~ .sidebar{
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar-container{
+    width: 100%;
+    max-width: 250px;
+    background: #0c0f11;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#button:checked ~ .sidebar .sidebar-container{
+    transform: translateX(0%)
+}
+
+.sidebar-container nav{
+    transform: translateY(0%);
+}
+
+#sidebar-logo{
+    display: block;
+    text-decoration: none;
+    font-size: 35px;
+    margin-left: 24px;
+    padding: 6px;
+    color: #ffffff;
+    cursor: pointer;
+
+}
+.sidebar-container nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    color: #ffffff;
+    border-left: 8px solid transparent;
+    transition: all 400ms ease;
+}
+
+.sidebar-container nav ul li a i{
+    margin-right: 8px;
+}
+
+.sidebar-container nav a:hover{
+    border-left: 2px solid #c7c7c7;
+    background: #363030;
+}
+
+.menu-exit{
+    font-size: 30px;
+    color: #ffff;
+}
+
+.sidebar-container label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    cursor: pointer;
+}
+/*CONTENIDO*/
+
+.container-index{
+    padding: 80px;
+}
+
+.container-index img{
+    height: 150px;
+    width: 200px;
+}
+.container-images{
+    width: 100%;
+    height: auto;
+    margin-left: 50px;
+}
+
