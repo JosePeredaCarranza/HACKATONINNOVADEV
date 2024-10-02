@@ -2,10 +2,9 @@ import os
 import pandas as pd
 import mysql.connector
 from fpdf import FPDF
-import mysql.connector
 from flask import Flask, render_template, send_from_directory
 
-#app = Flask(__name__)
+app = Flask(__name__)
 
 def obtener_datos(Username):
     conn = mysql.connector.connect(
@@ -58,9 +57,6 @@ class PDF(FPDF):
                 self.cell(ancho_columnas[i], 7, str(fila[i]), 1, 0, fill=False)
             self.ln()
 
-generar_pdf('jose.pereda@unmsm.edu.pe')
-
-"""
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -68,8 +64,7 @@ def index():
 @app.route('/descargar/<Username>')
 def descargar(Username):
     generar_pdf(Username)
-    return send_from_directory('static/reportes', f'reporte_{Username}.pdf', as_attachment=True)
+    return send_from_directory('static/reportes', f'reporte_registro.pdf', as_attachment=True)
 
 if __name__ == '__main__':
     app.run(debug=True)
-"""
