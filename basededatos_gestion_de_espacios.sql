@@ -5,7 +5,7 @@ CREATE TABLE Usuarios (
 	nombre VARCHAR(50) NOT NULL,
 	apellido VARCHAR(100) NOT NULL,
     correo VARCHAR(100) NOT NULL,
-	contra VARCHAR(100) NOT NULL,
+	contra VARCHAR(162) NOT NULL,
 	rol ENUM('estudiante', 'profesor', 'administrador') NOT NULL,
 	PRIMARY KEY (id_usuario),
 	UNIQUE INDEX id_usuario_UNIQUE (id_usuario ASC),
@@ -48,9 +48,5 @@ CREATE TABLE Programacion_cursos (
 ENGINE = InnoDB;
 
 
-
-SHOW CREATE TABLE Usuarios;
-
-
-
-DROP TABLE Cursos;
+-- SHOW CREATE TABLE nombre_tabla;
+-- DROP TABLE nombre_tabla;
