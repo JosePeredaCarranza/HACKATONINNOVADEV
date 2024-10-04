@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TITULO</title>
-    <link rel="stylesheet" href="style.css"> 
+    <!--CSS-->
+    <link rel="stylesheet" href="aulas.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -40,44 +41,53 @@
 <!-- BARRA LATERAL-->
 
     <div class="sidebar">
-        <div class="sidebar-container">
-            <a href="../index/index.html" id="sidebar-logo">SGAL-FISI</a>
-            <nav>
-                <div class="row">
-                    <ul>
-                        <li>
-                            <div class="col-md-12">
-                                <a href="../index/index.html"><i class="fa-solid fa-house"></i>Inicio</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="col-md-12">
-                                <a href="aulas.html"><i class="fa-solid fa-school"></i>Gestionar aulas</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="col-md-12">
-                                <a href="../laboratorios/labs.html"><i class="fa-solid fa-computer"></i>Gestionar laboratorio</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="col-md-12">
-                                <a href="#"><i class="fa-solid fa-users"></i>Gestionar usuarios</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="col-md-12">
-                                <a href="#"><i class="fa-solid fa-file-arrow-down"></i>Descargar reporte</a>
-                            </div>
-                        </li>
-                    </ul>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="sidebar-container">
+                    <a href="../index/index.html" id="sidebar-logo">SGAL-FISI</a>
+                    <nav>
+                        <div class="row">
+                            <ul>
+                                <li>
+                                    <div class="col-md-12">
+                                        <a href="../index/index.html"><i class="fa-solid fa-house"></i>Inicio</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-md-12">
+                                        <a href="../aulas/aulas.html"><i class="fa-solid fa-school"></i>Gestionar aulas</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-md-12">
+                                        <a href="../laboratorios/labs.html"><i class="fa-solid fa-computer"></i>Gestionar laboratorio</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-md-12">
+                                        <a href="#"><i class="fa-solid fa-users"></i>Gestionar usuarios</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-md-12">
+                                        <a href="#"><i class="fa-solid fa-file-arrow-down"></i>Descargar reporte</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <label for="button" class="menu-exit">
+                        <i class="bi bi-x"></i>
+                    </label>
                 </div>
-            </nav>
-            <label for="button" class="menu-exit">
-                <i class="bi bi-x"></i>
-            </label>
+            </div>
+            <div class="col-md-10">
+                <label for="button" class="sidebar-exit">   
+                    <div class="cuadrado"></div>
+                </label>
+            </div>
         </div>
-    </div>
+    </div>  
 
 <!--CONTENIDO-->
     <div class="container" style="padding-top: 60px;" >
@@ -91,7 +101,7 @@
                             <th>PABELLÓN</th>
                             <th>CURSO</th>
                             <th>AGREGAR</th>
-                            <th></th>
+                            <th>ELIMINAR</th>
                         </tr>
                     </thead>
                     <tbody id="tableBody_users"></tbody>
@@ -110,7 +120,7 @@
     <!--DataTable-->
     <script src="https://cdn.datatables.net/2.1.7/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.1.7/js/dataTables.bootstrap5.min.js"></script>
-    <!--CUSOTOM JS-->
+    <!--CUSTOM JS-->
     <script src="main.js"></script>
 </body>
 </html>

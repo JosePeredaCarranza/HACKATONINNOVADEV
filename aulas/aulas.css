@@ -5,6 +5,7 @@
     list-style: none;
     box-sizing: border-box;
     font-family: "Varela Round", sans-serif;
+    z-index: 0;
 }
 
 .header{
@@ -50,6 +51,7 @@
 }
 
 .sidebar{
+    z-index: 1;
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -112,6 +114,11 @@
     background: #363030;
 }
 
+.cuadrado{
+    height: 100vw;
+    width: 179vh;
+}
+
 .menu-exit{
     font-size: 30px;
     color: #ffff;
@@ -125,17 +132,11 @@
 }
 /*CONTENIDO*/
 
-.container-index{
-    padding: 80px;
+.centered{
+    text-align: center !important;
+    vertical-align: middle !important;
 }
 
-.container-index img{
-    height: 150px;
-    width: 200px;
-}
-.container-images{
-    width: 100%;
-    height: auto;
-    margin-left: 50px;
-}
+
+
 

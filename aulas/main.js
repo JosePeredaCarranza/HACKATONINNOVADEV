@@ -1,11 +1,10 @@
 let dataTable;
 let dataTableIsInitialized = false;
 
-const dataTableOptions= {
-
+const dataTableOptions= { 
     columnDefs:[
-        { className: "centrar", tragets: [0,1,2,3,4,5]},
-        { ordenable:false, targets:[0,1,2,3,4,5]},
+        {className:"centered", targets: [0,1,2,3,4,5]},
+        {orderable:false, targets:[0,1,2,3,4,5]}
     ],
     destroy: true,
 
@@ -21,7 +20,7 @@ const dataTableOptions= {
             first: "Primero",
             last: "Último",
             next: "Siguiente",
-            previous: "Anterior"
+            previous: "Anterior",
         }
     }
 };
@@ -51,9 +50,10 @@ const listUsers=async() => {
                 <td>${user.name}</td>
                 <td>${user.email}</td>
                 <td>${user.address.city}</td>
-                <td><i class="fa-solid fa-pencil"></i></td>
                 <td>
                     <button class="btn btn-sm btn-primary"><i class="fa-solid fa-pencil"></i></button>
+                </td>
+                <td>
                     <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash-can"></i></button>
                 </td>
             </tr>`;

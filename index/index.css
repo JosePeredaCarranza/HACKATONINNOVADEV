@@ -7,6 +7,8 @@
     font-family: "Varela Round", sans-serif;
 }
 
+/*ENCABEZADO*/
+
 .header{
     position: fixed;
     background-color: #060607;  
@@ -38,7 +40,6 @@
     display: none;
 }
 
-
 .menu-button, .logo-name a{
     font-size: 25px;
     text-decoration: none;
@@ -67,10 +68,9 @@
 }
 
 .sidebar-container{
-    width: 100%;
-    max-width: 250px;
     background: #0c0f11;
     height: 100vh;
+    width: 260px;
     position: relative;
     transition: all 500ms ease;
     transform: translateX(-100%);
@@ -92,12 +92,12 @@
     padding: 6px;
     color: #ffffff;
     cursor: pointer;
-
 }
+
 .sidebar-container nav ul li a{
     display: block;
     text-decoration: none;
-    padding: 15px;
+    padding: 15px 2px 15px 15px;
     color: #ffffff;
     border-left: 8px solid transparent;
     transition: all 400ms ease;
@@ -112,9 +112,9 @@
     background: #363030;
 }
 
-.menu-exit{
-    font-size: 30px;
-    color: #ffff;
+.cuadrado{
+    height: 100vw;
+    width: 179vh;
 }
 
 .sidebar-container label{
@@ -123,11 +123,37 @@
     top: 10px;
     cursor: pointer;
 }
+
 /*CONTENIDO*/
 
-.centrar{
-    text-align: center !important;
-    vertical-align: middle !important;
+.container-index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
 }
 
+.tarjeta{
+    width: 80%;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    transition: all 400ms ease;
+    cursor: default;
+    overflow: hidden;
+}
 
+.container-index img{
+    height: 150px;
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    border-radius: 15px;
+    max-width: 100%;
+}
+
+.tarjeta:hover{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 2);
+    transform: translateY(-3%);
+}
