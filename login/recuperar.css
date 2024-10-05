@@ -54,10 +54,10 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 #bg-container {
-    width: 750px;
+    width: 420px;
     height: 450px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -71,7 +71,10 @@ body {
 #bg-container.dark-mode {
     background-color: rgb(20, 19, 19);
 }
-
+.title{
+    position: relative;
+    top: -20px;
+}
 form{
     display: flex;
     flex-direction: column;
@@ -90,16 +93,16 @@ form label {
     border: 0;
 }
 form button.light-mode{
-    width: 50%;
+    width: 28%;
     padding: 10px 20px;
     background-color: #71adec; 
     color: rgb(0, 0, 0); 
     border: none; 
     border-radius: 5px; 
-    font-size: 12px;
+    font-size: 16px;
     cursor: pointer; 
     transition: background-color 0.3s ease;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);  
 }
 
 form input.light-mode{
@@ -115,12 +118,6 @@ form input.light-mode{
     transition: border-color 0.3s;
 }
 
-#Imagen-login{
-    display: block;
-    width: auto;
-    border-radius: 10px;
-    height: 450px;
-}
 .centered-elements {
     font-size: 17px;
     display: flex;
@@ -132,9 +129,11 @@ form input.light-mode{
     width: 375px;
 }
 .links {
+    position: relative;
+    bottom: 10px;
+    display: flex;
     font-size: 15px;
     margin-top: 20px;
-    display: flex;
     flex-direction: column;
     gap: 10px;
 }
