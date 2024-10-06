@@ -2,13 +2,21 @@ CREATE DATABASE gestion_espacios;
 USE gestion_espacios;
 CREATE TABLE Usuarios (
 	id_usuario INT NOT NULL AUTO_INCREMENT,
+    codigo VARCHAR(8) NOT NULL,
+    dni VARCHAR(8) NOT NULL,
 	nombre VARCHAR(50) NOT NULL,
 	apellido VARCHAR(100) NOT NULL,
     correo VARCHAR(100) NOT NULL,
+<<<<<<< HEAD:basededatos_gestion_de_espacios.sql
 	contra VARCHAR(162) NOT NULL,
 	rol ENUM('estudiante', 'profesor', 'administrador') NOT NULL,
+=======
+	contra VARCHAR(255) NOT NULL,
+	rol ENUM('Estudiante', 'Profesor', 'Administrador') NOT NULL,
+>>>>>>> master:src/database/basededatos_gestion_de_espacios.sql
 	PRIMARY KEY (id_usuario),
-	UNIQUE INDEX id_usuario_UNIQUE (id_usuario ASC),
+    UNIQUE INDEX codigo_UNIQUE (codigo ASC),
+    UNIQUE INDEX dni_UNIQUE (dni ASC),
 	UNIQUE INDEX correo_UNIQUE (correo ASC))
 ENGINE = InnoDB;
 CREATE TABLE Espacios(
