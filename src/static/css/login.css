@@ -1,0 +1,177 @@
+*{
+    font-family: "Varela Round", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+body {
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+#mode{
+    display: flex;
+    position: fixed; 
+    width: 45px;
+    height: 45px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    right: 30px;
+    border: 2px solid yellow;
+    border-radius: 100%;
+    z-index: 1000;
+}
+#mode svg{    
+    fill: yellow;
+    width: 30px;
+    height: 30px;
+}
+#invisible{
+    display: none;
+}
+#fondo-pag{
+    position: absolute;
+    z-index: -1;
+    filter: blur(3px);
+    background-size: cover;
+    background-position: center;
+    width:100% ;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#fondo-pag, #Imagen-login {
+    transition: opacity 0.5s ease-in-out;
+}
+#bg-container {
+    width: 750px;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+#bg-container.light-mode {
+    background-color: whitesmoke;
+}
+
+#bg-container.dark-mode {
+    background-color: rgb(20, 19, 19);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    align-items: center;
+}
+form label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+form button.light-mode{
+    width: 50%;
+    padding: 10px 20px;
+    background-color: #71adec; 
+    color: rgb(0, 0, 0); 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 12px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+form input.light-mode{
+    border-radius: 5px;
+    width: 200px;
+    height: 35px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    font-size: 14px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#Imagen-login{
+    display: block;
+    width: auto;
+    border-radius: 10px;
+    height: 450px;
+}
+.centered-elements {
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bg-container-elements {
+    width: 375px;
+}
+.links {
+    font-size: 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.links a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode #mode {
+    border: 2px solid white;
+}
+
+body.dark-mode #mode svg {
+    fill: white;
+}
+
+body.dark-mode #fondo-pag {
+    opacity: 0.5;
+}
+
+body.dark-mode #bg-container {
+    background-color: rgb(20, 19, 19);
+}
+
+body.dark-mode input, body.dark-mode button {
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+body.dark-mode a {
+    color: lightblue;
+}
