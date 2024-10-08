@@ -295,7 +295,7 @@ def generar_pdf(user):
             writer.add_page(reader.pages[page_num])
 
         # Establecer una contraseña
-        password = user.dni
+        password = str(user.dni)
         writer.encrypt(password)
 
         # Guardar el PDF protegido
