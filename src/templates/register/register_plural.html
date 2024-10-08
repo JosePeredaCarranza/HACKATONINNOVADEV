@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <h1>Hola</h1>
+    <div class="centered-elements bg-container-elements">
+        <h1>SGAL - FISI</h1>
+        <h1>Registro</h1>
+        <span id="error-message" style="color : red"></span>
+        <form action="/register/plural" method="POST" enctype="multipart/form-data">
+            <h2>Registro Masivo (Archivo CSV o Excel)</h2>
+            <label for="csvFile">Subir archivo CSV o Excel:</label>
+            <input type="file" id="csvFile" name="csvFile" accept=".csv, .xlsx">
+            <br><br>
+            <input type="submit" value="Registrar Usuarios">
+        </form>
+    <h1>Resultado</h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <br/>
+    {% for message in messages %}
+    <strong>{{message}}</strong></br>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <a href="{{ url_for('logout')}}">Logout</a>
+    <a href="{{ url_for('home')}}">Home</a>
+</body>
+</html>
