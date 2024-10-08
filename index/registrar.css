@@ -1,0 +1,330 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Varela Round", sans-serif;
+    overflow: hidden;
+}
+
+/*ENCABEZADO*/
+
+.header{
+    position: fixed;
+    background-color: #060607;  
+    padding: none;
+    height: 60px;
+    width: 100%;
+}
+
+.container-header{
+    display: block;
+    user-select: text;
+    color: #ffff;
+    cursor: pointer;
+}
+
+.user-session{
+    float: right;
+    margin-right: 20px;
+}
+
+.user-session a{
+    line-height: 60px;
+    margin-right: 10px;
+}
+
+/*MENU DESPLEGABLE*/
+
+#button{
+    display: none;
+}
+
+.menu-button, .logo-name a{
+    font-size: 25px;
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 60px;
+    float: left;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.sidebar{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#button:checked ~ .sidebar{
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar-container{
+    background: #0c0f11;
+    height: 100vh;
+    width: 260px;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#button:checked ~ .sidebar .sidebar-container{
+    transform: translateX(0%)
+}
+
+.sidebar-container nav{
+    transform: translateY(0%);
+}
+
+#sidebar-logo{
+    display: block;
+    text-decoration: none;
+    font-size: 35px;
+    margin-left: 24px;
+    padding: 6px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.sidebar-container nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 15px 2px 15px 15px;
+    color: #ffffff;
+    border-left: 8px solid transparent;
+    transition: all 400ms ease;
+}
+
+.sidebar-container nav ul li a i{
+    margin-right: 8px;
+}
+
+.sidebar-container nav a:hover{
+    border-left: 2px solid #c7c7c7;
+    background: #363030;
+}
+
+.cuadrado{
+    height: 100vw;
+    width: 179vh;
+}
+
+.sidebar-container label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    cursor: pointer;
+}
+
+/*CONTENIDO*/
+@keyframes slideUp {
+    0% {
+        transform: translateY(220px);
+    }
+    100% {
+        transform: translateY(200px); 
+    }
+}
+
+/* Animación para hacer aparecer los divs con imágenes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#tpg{
+    position: relative;
+    z-index: -1;
+    animation: slideUp 2s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    background-color: white;
+}
+#bgb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.sb{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    opacity: 0;
+    animation: fadeIn 1.2s forwards;
+    animation-delay: 1.2s;
+    height: auto;
+    margin: 25px; 
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(30, 187, 235, 0.5); 
+    padding: 10px;
+}
+.sb a{
+    text-decoration: none;
+}
+/*CUADROS EMERGENTES*/
+.darkBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    transition: opacity 0.5s;
+}
+
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 800px;
+    height: 750px;
+    box-shadow: 0 0 25px rgba(30, 187, 235, 0.5); 
+    z-index: 1001;
+    transform: scale(0.9);
+    transition: opacity 0.5s, transform 0.5s; 
+}
+.popup div form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.popup input {
+    margin: 10px 0; 
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 300px;
+    height: 40px;
+    box-shadow: inset 0 0 100px rgba(49, 52, 53, 0.5); 
+}
+.popup input[type="file"] {
+    border: 2px dashed #ccc; 
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%; 
+    height: auto; 
+    background-color: #f9f9f9; 
+    box-shadow: none; 
+    cursor: pointer; 
+    
+}
+.popup button{
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #1e1e1e;
+    color: white;
+    box-shadow: 0 0 15px rgba(35, 38, 39, 0.5); 
+}
+#multipleresults{
+    margin-top: 10px;
+    width: 700px;
+    height: 300px;
+    border-radius:20px;
+    box-shadow: 0 0 15px rgba(35, 38, 39, 0.5); 
+}
+.darkBackground2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    transition: opacity 0.5s;
+}
+.popup2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    height: 650px;
+    box-shadow: 0 0 25px rgba(30, 187, 235, 0.5); 
+    z-index: 1001;
+    transform: scale(0.9); 
+    transition: opacity 0.5s, transform 0.5s; 
+}
+.popup2 div form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.popup2 form label{
+    display: none;
+}
+.popup2 form input{
+    margin: 10px 0; 
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 300px;
+    height: 40px;
+    box-shadow: inset 0 0 4px rgba(49, 52, 53, 0.5); 
+}
+.popup2 form button{
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #1e1e1e;
+    color: white;
+    box-shadow: 0 0 15px rgba(35, 38, 39, 0.5); 
+}
+.popup2 form select{
+    border-radius: 20px;
+}
+#results{
+    margin-top: 10px;
+    width: 400px;
+    height: 100px;
+    border-radius:20px;
+    box-shadow: 0 0 15px rgba(35, 38, 39, 0.5); 
+}
+.btnclose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 24px; 
+    height: 24px; 
+}
